@@ -16,6 +16,9 @@ These have default options for the portName = /dev/ttyUSB0, and baudrate = 9600,
 var SerialServo = require("serialservo");
 var ssc = new SerialServo(); // default
 ssc.move(0,100); // move pin 0 to position 100
+ssc.nav(100,100); // send multiple bytes to pins 0 and 1 to positions 100
+ssc.timedMove(0,100,100); // send move pin 0 to position 100 for 100ms, then back to 127
+ssc.timedNav(100,100,100); // send multiple bytes to pins 0 and 1 to position 100 for 100ms, then back to 127
 ```
 
 ## Serial Servo Controller Protocol

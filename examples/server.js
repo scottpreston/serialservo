@@ -11,8 +11,13 @@ router.get('/', function (req, res) {
 router.get('/move/:pin/:pos/:timeout', function (req, res) {
     var pin = req.params.pin;
     var pos = req.params.pos;
+    var timeout = req.params.timeout || 0;
     if (pin >= 0 && pin <= 7 && pos >= 0 && pos <= 255) {
-        ssc.move(pin, pos);
+        if (timeout > 0) {
+            ssc.timedMove(pin, pos, timeout);
+        } else {
+            ssc.move(pin, pos);
+        }
         res.status(200).send({ success: 'moved the ssc' });
     } else {
         res.status(500).send({ error: 'oops, you need the right param values!' });
@@ -22,8 +27,13 @@ router.get('/move/:pin/:pos/:timeout', function (req, res) {
 router.get('/nav/:left/:right:/:timeout', function (req, res) {
     var left = req.params.left;
     var right = req.params.right;
+    var timeout = req.params.timeout || 0;
     if (left >= 0 && left <= 255 && right >= 0 && right <= 255) {
-        ssc.nav(left, right);
+        if (timeout > 0) {
+            ssc.timedNav(left, right, timeout);
+        } else {
+            ssc.nav(left, right);
+        }
         res.status(200).send({ success: 'moved the ssc' });
     } else {
         res.status(500).send({ error: 'oops, you need the right param values!' });
