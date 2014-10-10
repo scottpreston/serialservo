@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Serial Servo Controller - Help</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<h1>API</h1>
+
+<p>GET - /move/{pin}/{pos}</p>
+<ul>
+    <li>pin - 0 to 7, the pin it's plugged in on the SSC.</li>
+    <li>pos - 0 to 255. 0 Full CCW, 127 - stopped, 255 Full CW.</li>
+</ul>
+
+<p>GET - /nav/{left_motor}/{right_motor}</p>
+<ul>
+    <li>left_motor - 0 to 255. 0 Full CCW, 127 - stopped, 255 Full CW.</li>
+    <li>right_motor - 0 to 255. 0 Full CCW, 127 - stopped, 255 Full CW.</li>
+</ul>
+</body>
+</html>
