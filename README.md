@@ -2,24 +2,11 @@
 
 This module will allow for using the serial servo controller via a serial port.
 
-## Serial Servo Controller Protocol
+## Install
 
-This npm utilizes the 3-byte protocol popularized by the Scott Edwards Mini-SSC2. You can view the entire PDF in the docs/ directory of this project.
-
-The protocol itself consist of 3 bytes in the format [255,pin,pos]
-
-pin - generally from 0-7 or 0-31 based on the size of your controller.
-pos - from 0-255, where 0 would be 0 degrees and 255 would coorespond to 180 degrees on a 0-180 degree servo.
-
-## Example Servo Controllers
-
-Just google the term "serial servo controller" you will find a lot of products.
-
-You can visit sites:
-
-* http://www.pololu.com/
-* http://www.lynxmotion.com/
-* https://www.sparkfun.com
+```bash
+npm install serialservo
+```
 
 ## Typical Usage
 
@@ -30,6 +17,25 @@ var SerialServo = require("serialservo");
 var ssc = new SerialServo(); // default
 ssc.move(0,100); // move pin 0 to position 100
 ```
+
+## Serial Servo Controller Protocol
+
+This npm utilizes the 3-byte protocol popularized by the Scott Edwards Mini-SSC2. You can view the entire PDF in the docs/ directory of this project.
+
+The protocol itself consist of 3 bytes in the format [255,pin,pos]
+
+* pin - generally from 0-7 or 0-31 based on the size of your controller.
+* pos - from 0-255, where 0 would be 0 degrees and 255 would coorespond to 180 degrees on a 0-180 degree servo.
+
+## Example Servo Controllers
+
+Just google the term "serial servo controller" you will find a lot of products.
+
+You can visit sites:
+
+* http://www.pololu.com/
+* http://www.lynxmotion.com/
+* https://www.sparkfun.com
 
 ## Cusomized Usage
 
