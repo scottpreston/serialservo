@@ -5,7 +5,7 @@ This module will allow for using the serial servo controller via a serial port.
 ## Install
 
 ```bash
-npm install serialservo
+npm install
 ```
 
 ## Typical Usage
@@ -58,7 +58,7 @@ ssc.move(0,100); // move pin 0 to position 100
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Scott Preston
+Copyright (c) 2014-16 Scott Preston
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

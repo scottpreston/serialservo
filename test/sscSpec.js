@@ -21,18 +21,19 @@ describe("serial controller nav functionality", function () {
     it("should pass specific bytes to the serial port", function () {
         spyOn(ssc, 'move');
         ssc.nav(1, 1);
-        expect(ssc.move.calls.length).toEqual(2);
+        expect(ssc.move.calls.count()).toEqual(2);
     });
 });
 
 describe("serial controller timed move functionality", function () {
     var ssc = new SerialServoController();
     it("call move twice", function () {
-        jasmine.Clock.useMock();
+        jasmine.clock().install();
         spyOn(ssc, 'move');
         ssc.timedMove(1, 1, 50);
-        jasmine.Clock.tick(100);
-        expect(ssc.move.calls.length).toEqual(2);
+        jasmine.clock().tick(100);
+        expect(ssc.move.calls.count()).toEqual(2);
+        jasmine.clock().uninstall();
 
     });
 });
@@ -40,11 +41,12 @@ describe("serial controller timed move functionality", function () {
 describe("serial controller timed navigation functionality", function () {
     var ssc = new SerialServoController();
     it("should call move 4 times", function () {
-        jasmine.Clock.useMock();
+        jasmine.clock().install();
         spyOn(ssc, 'move');
         ssc.timedNav(1, 1, 50);
-        jasmine.Clock.tick(100);
-        expect(ssc.move.calls.length).toEqual(4);
+        jasmine.clock().tick(100);
+        expect(ssc.move.calls.count()).toEqual(4);
+        jasmine.clock().uninstall();
 
     });
 });
