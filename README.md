@@ -1,6 +1,9 @@
 # serialservo
 
-This module will allow for using the serial servo controller via a serial port.
+This module will allow for using the serial servo controller via a serial port. 
+
+If you don't have a serial port on your machine you, this will add a mock serial port for you so you can still run your test. 
+Because this port just uses the write method of the serial port, the mock serial port just uses that.
 
 ## Install
 
