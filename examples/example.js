@@ -1,7 +1,7 @@
 var SerialServo = require("../lib/ssc.js"); // replace with serialservo
 var sleep = require('sleep');
 var ssc = new SerialServo({
-    portName: "/dev/USBtty1",
+    portName: "/dev/ttyUSB1",
     serialPortOptions: {baudrate: 9600},
     enableLogging: false
 });
