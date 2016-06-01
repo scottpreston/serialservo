@@ -17,7 +17,7 @@ npm install
 npm install
 npm install istanbul -g
 npm test
-npm coverage
+npm run coverage
 ```
 
 
