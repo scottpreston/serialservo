@@ -11,6 +11,16 @@ Because this port just uses the write method of the serial port, the mock serial
 npm install
 ```
 
+## Testing
+
+```bash
+npm install
+npm install istanbul -g
+npm test
+npm coverage
+```
+
+
 ## Typical Usage
 
 These have default options for the portName = /dev/ttyUSB0, and baudrate = 9600, enabledLogging = true.

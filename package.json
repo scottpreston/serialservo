@@ -1,6 +1,6 @@
 {
   "name": "serialservo",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "allows calls to serial servo controller using 3-byte protocol",
   "main": "lib/ssc.js",
   "repository": {
@@ -12,7 +12,8 @@
     "ssc"
   ],
   "scripts": {
-    "start": "bar ./test"
+    "test": "jasmine",
+    "coverage" : "istanbul cover node_modules/jasmine/bin/jasmine.js test/*.js"
   },
   "author": "Scott Preston",
   "license": "MIT",
