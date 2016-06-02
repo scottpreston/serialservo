@@ -8,7 +8,7 @@
     "url": "git://github.com/scottpreston/serialservo"
   },
   "keywords": [
-    "serial serovo controller",
+    "serial servo controller",
     "ssc"
   ],
   "scripts": {
