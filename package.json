@@ -1,6 +1,6 @@
 {
   "name": "serialservo",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "allows calls to serial servo controller using 3-byte protocol",
   "main": "lib/ssc.js",
   "repository": {
@@ -20,12 +20,11 @@
   "bugs": {
     "url": "https://github.com/scottpreston/serialservo/issues"
   },
-  "dependencies": {
-    "file-exists": "^1.0.0",
-    "mock-serialport": "0.0.1",
-    "serialport": "^3.1.2"
-  },
   "devDependencies": {
     "jasmine": "^2.4.1"
+  },
+  "dependencies": {
+    "mock-serialport": "0.0.1",
+    "serialport": "^3.1.2"
   }
 }
